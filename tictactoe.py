@@ -9,6 +9,11 @@ get_player1 = input("Enter Player 1's Name: ")
 get_player2 = input("Enter Player 2's Name: ")
 
 player_turn = {
-    "Name":get_player1
+    "Name":get_player1,
     "Symbol":"X"
 }
+
+def board_preview():
+    print("\n"+gameboard+"\n")
+
+print(get_player1, get_player2, player_turn)
