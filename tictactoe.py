@@ -38,8 +38,9 @@ def change_player():
         player_turn["Name"] = get_player1
     print(player_turn["Symbol"], player_turn["Name"])
 
-board_preview()
-choose_position()
-change_player()
+while True:
+    board_preview()
+    choose_position()
+    change_player()
 
 
