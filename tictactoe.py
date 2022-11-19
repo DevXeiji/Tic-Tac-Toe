@@ -132,10 +132,10 @@ gameboard = ["☐", "☐", "☐",
 
 get_player1 = input("Enter Player 1's Name: ")
 get_player1symbol = input("Enter Player 1's desired Symbol: ")
-get_player1type = " "+get_player1symbol+" "
+get_player1symbol = " "+get_player1symbol+" "
 get_player2 = input("Enter Player 2's Name: ")
 get_player2symbol = input("Enter Player 1's desired Symbol: ")
-get_player2type = " "+get_player2symbol+" "
+get_player2symbol = " "+get_player2symbol+" "
 
 
 player_turn = {
@@ -153,8 +153,3 @@ while True:
     if "☐" not in gameboard:
         print("Game Ended with a tie!")
         exit()
-    
-
-    
-
-
