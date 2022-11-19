@@ -23,6 +23,7 @@ def board_preview():
 board_preview()
 print(player_turn["Name"]+"'s Turn")
 pos = input("Choose a position from 0-9: ")
-print(pos)
-
+pos = int(pos)
+gameboard[pos] = player_turn["Symbol"]
+board_preview()
 
