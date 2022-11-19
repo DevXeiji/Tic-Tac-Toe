@@ -12,7 +12,7 @@ get_player2symbol = input("Enter Player 1's desired Symbol: ")
 
 player_turn = {
     "Name":get_player1,
-    "Symbol":"X"
+    "Symbol":get_player1symbol
 }
 
 def board_preview():
@@ -56,10 +56,10 @@ def choose_position():
 
 
 def change_player():
-    if player_turn["Symbol"] == "X":
-        player_turn["Symbol"] = "O"    
-    elif player_turn["Symbol"] == "O":
-        player_turn["Symbol"] = "X"
+    if player_turn["Symbol"] == get_player1symbol:
+        player_turn["Symbol"] = get_player2symbol    
+    elif player_turn["Symbol"] == get_player2symbol:
+        player_turn["Symbol"] = get_player1symbol
     if player_turn["Name"] == get_player1:
         player_turn["Name"] = get_player2    
     elif player_turn["Name"] == get_player2:
@@ -72,23 +72,23 @@ def row_winner():
     row3 = gameboard[6] == gameboard[7] == gameboard[8] != "☐"
     if row1:
         winner = gameboard[0]
-        if winner == "X":
+        if winner == get_player1symbol:
             print(get_player1 + " won.")
-        elif winner == "O":
+        elif winner == get_player2symbol:
             print(get_player2 + " won.")
         exit()
     elif row2:
         winner = gameboard[3]
-        if winner == "X":
+        if winner == get_player1symbol:
             print(get_player1 + " won.")
-        elif winner == "O":
+        elif winner == get_player2symbol:
             print(get_player2 + " won.")
         exit()
     elif row3:
         winner = gameboard[6]
-        if winner == "X":
+        if winner == get_player1symbol:
             print(get_player1 + " won.")
-        elif winner == "O":
+        elif winner == get_player2symbol:
             print(get_player2 + " won.")
         exit()
 
@@ -97,16 +97,16 @@ def diagonal_winner():
     diagonal2 = gameboard[2] == gameboard[4] == gameboard[6] != "☐"
     if diagonal1:
         winner = gameboard[0]
-        if winner == "X":
+        if winner == get_player1symbol:
             print(get_player1 + " won.")
-        elif winner == "O":
+        elif winner == get_player2symbol:
             print(get_player2 + " won.")
         exit()
     elif diagonal2:
         winner = gameboard[2]
-        if winner == "X":
+        if winner == get_player1symbol:
             print(get_player1 + " won.")
-        elif winner == "O":
+        elif winner == get_player2symbol:
             print(get_player2 + " won.")
         exit()
 
@@ -117,23 +117,23 @@ def vertical_winner():
     vertical3 = gameboard[2] == gameboard[5] == gameboard[8] != "☐"
     if vertical1:
         winner = gameboard[0]
-        if winner == "X":
+        if winner == get_player1symbol:
             print(get_player1 + " won.")
-        elif winner == "O":
+        elif winner == get_player2symbol:
             print(get_player2 + " won.")
         exit()
     elif vertical2:
         winner = gameboard[1]
-        if winner == "X":
+        if winner == get_player1symbol:
             print(get_player1 + " won.")
-        elif winner == "O":
+        elif winner == get_player2symbol:
             print(get_player2 + " won.")
         exit()
     elif vertical3:
         winner = gameboard[2]
-        if winner == "X":
+        if winner == get_player1symbol:
             print(get_player1 + " won.")
-        elif winner == "O":
+        elif winner == get_player2symbol:
             print(get_player2 + " won.")
         exit()
 
