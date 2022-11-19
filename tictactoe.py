@@ -14,11 +14,28 @@ player_turn = {
 }
 
 def board_preview():
-    print("\n"
-    +gameboard[0]+"  | "+gameboard[1]+"  | "+gameboard[2]+"    1 | 2 | 3"+"\n"
-    +gameboard[3]+"  | "+gameboard[4]+"  | "+gameboard[5]+"    4 | 5 | 6"+"\n"
-    +gameboard[6]+"  | "+gameboard[7]+"  | "+gameboard[8]+"    7 | 8 | 9"+"\n"
-    +"\n")
+    for i in enumerate(gameboard):
+        if i[0] == 0:
+            p1 = "[1]" if i[1] == "☐" else gameboard[0]
+        if i[0] == 1:
+            p2 = "[2]" if i[1] == "☐" else gameboard[1]
+        if i[0] == 2:
+            p3 = "[3]" if i[1] == "☐" else gameboard[2]
+        if i[0] == 3:
+            p4 = "[4]" if i[1] == "☐" else gameboard[3]
+        if i[0] == 4:
+            p5 = "[5]" if i[1] == "☐" else gameboard[4]
+        if i[0] == 5:
+            p6 = "[6]" if i[1] == "☐" else gameboard[5]
+        if i[0] == 6:
+            p7 = "[7]" if i[1] == "☐" else gameboard[6]
+        if i[0] == 7:
+            p8 = "[8]" if i[1] == "☐" else gameboard[7]
+        if i[0] == 8:
+            p9 = "[9]" if i[1] == "☐" else gameboard[8]
+    print(p1 + " | " + p2 + " | " + p3)
+    print(p4 + " | " + p5 + " | " + p6)
+    print(p7 + " | " + p8 + " | " + p9)
 
 def choose_position():
     print(player_turn["Name"]+"'s Turn")
@@ -92,14 +109,7 @@ def diagonal_winner():
         exit()
 
 
-board_preview()
-while True:
-    choose_position()
-    change_player()
-    row_winner()
-    if "☐" not in gameboard:
-        print("Game Ended with a tie!")
-        exit()
+def vertical_winner():
     vertical1 = gameboard[0] == gameboard[3] == gameboard[6] != "☐"
     vertical2 = gameboard[1] == gameboard[4] == gameboard[7] != "☐"
     vertical3 = gameboard[2] == gameboard[5] == gameboard[8] != "☐"
@@ -124,6 +134,19 @@ while True:
         elif winner == "O":
             print(get_player2 + " won.")
         exit()
+
+
+board_preview()
+while True:
+    choose_position()
+    change_player()
+    row_winner()
+    diagonal_winner()
+    vertical_winner()
+    if "☐" not in gameboard:
+        print("Game Ended with a tie!")
+        exit()
+    
 
     
 
