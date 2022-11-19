@@ -73,15 +73,7 @@ def row_winner():
             print(get_player2 + " won.")
         exit()
 
-
-board_preview()
-while True:
-    choose_position()
-    change_player()
-    row_winner()
-    if "☐" not in gameboard:
-        print("Game Ended with a tie!")
-        exit()
+def diagonal_winner():
     diagonal1 = gameboard[0] == gameboard[4] == gameboard[8] != "☐"
     diagonal2 = gameboard[2] == gameboard[4] == gameboard[6] != "☐"
     if diagonal1:
@@ -98,6 +90,17 @@ while True:
         elif winner == "O":
             print(get_player2 + " won.")
         exit()
+
+
+board_preview()
+while True:
+    choose_position()
+    change_player()
+    row_winner()
+    if "☐" not in gameboard:
+        print("Game Ended with a tie!")
+        exit()
+
 
     
 
