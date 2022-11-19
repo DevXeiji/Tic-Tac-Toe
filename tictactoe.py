@@ -22,7 +22,10 @@ def board_preview():
 
 def choose_position():
     print(player_turn["Name"]+"'s Turn")
-    pos = input("Choose a position from 0-9: ")
+    pos = (input("Choose a position from 0-9: "))
+    while pos not in ["1", "2", "3", "4", "5", "6", "7", "8", "9"]:
+        print("Invalid Input, please try again!")
+        pos = input("Choose a position from 1-9: ")
     pos = int(pos) - 1
     gameboard[pos] = player_turn["Symbol"]
     board_preview()
@@ -43,5 +46,6 @@ while True:
     board_preview()
     choose_position()
     change_player()
+    exit()
 
 
