@@ -1,20 +1,6 @@
 # This program allows you to play Tic Tac Toe with your friend!
 # Program created by: Jeferson A. Tadios
 
-gameboard = ["☐", "☐", "☐",
-         "☐", "☐", "☐",
-         "☐", "☐", "☐"]
-
-get_player1 = input("Enter Player 1's Name: ")
-get_player1symbol = input("Enter Player 1's desired Symbol: ")
-get_player2 = input("Enter Player 2's Name: ")
-get_player2symbol = input("Enter Player 1's desired Symbol: ")
-
-player_turn = {
-    "Name":get_player1,
-    "Symbol":get_player1symbol
-}
-
 def board_preview():
     for i in enumerate(gameboard):
         if i[0] == 0:
@@ -35,9 +21,9 @@ def board_preview():
             p8 = "[8]" if i[1] == "☐" else gameboard[7]
         if i[0] == 8:
             p9 = "[9]" if i[1] == "☐" else gameboard[8]
-    print(p1 + " | " + p2 + " | " + p3)
+    print("\n"+p1 + " | " + p2 + " | " + p3)
     print(p4 + " | " + p5 + " | " + p6)
-    print(p7 + " | " + p8 + " | " + p9)
+    print(p7 + " | " + p8 + " | " + p9+"\n")
 
 def choose_position():
     print(player_turn["Name"]+"'s Turn")
@@ -73,23 +59,23 @@ def row_winner():
     if row1:
         winner = gameboard[0]
         if winner == get_player1symbol:
-            print(get_player1 + " won.")
+            print("Game Ended! We have a winner: "+ get_player1 + " won.")
         elif winner == get_player2symbol:
-            print(get_player2 + " won.")
+            print("Game Ended! We have a winner: "+ get_player2 + " won.")
         exit()
     elif row2:
         winner = gameboard[3]
         if winner == get_player1symbol:
-            print(get_player1 + " won.")
+            print("Game Ended! We have a winner: "+ get_player1 + " won.")
         elif winner == get_player2symbol:
-            print(get_player2 + " won.")
+            print("Game Ended! We have a winner: "+ get_player2 + " won.")
         exit()
     elif row3:
         winner = gameboard[6]
         if winner == get_player1symbol:
-            print(get_player1 + " won.")
+            print("Game Ended! We have a winner: "+ get_player1 + " won.")
         elif winner == get_player2symbol:
-            print(get_player2 + " won.")
+            print("Game Ended! We have a winner: "+ get_player2 + " won.")
         exit()
 
 def diagonal_winner():
@@ -98,16 +84,16 @@ def diagonal_winner():
     if diagonal1:
         winner = gameboard[0]
         if winner == get_player1symbol:
-            print(get_player1 + " won.")
+            print("Game Ended! We have a winner: "+ get_player1 + " won.")
         elif winner == get_player2symbol:
-            print(get_player2 + " won.")
+            print("Game Ended! We have a winner: "+ get_player2 + " won.")
         exit()
     elif diagonal2:
         winner = gameboard[2]
         if winner == get_player1symbol:
-            print(get_player1 + " won.")
+            print("Game Ended! We have a winner: "+ get_player1 + " won.")
         elif winner == get_player2symbol:
-            print(get_player2 + " won.")
+            print("Game Ended! We have a winner: "+ get_player2 + " won.")
         exit()
 
 
@@ -118,25 +104,44 @@ def vertical_winner():
     if vertical1:
         winner = gameboard[0]
         if winner == get_player1symbol:
-            print(get_player1 + " won.")
+            print("Game Ended! We have a winner: "+ get_player1 + " won.")
         elif winner == get_player2symbol:
-            print(get_player2 + " won.")
+            print("Game Ended! We have a winner: "+ get_player2 + " won.")
         exit()
     elif vertical2:
         winner = gameboard[1]
         if winner == get_player1symbol:
-            print(get_player1 + " won.")
+            print("Game Ended! We have a winner: "+ get_player1 + " won.")
         elif winner == get_player2symbol:
-            print(get_player2 + " won.")
+            print("Game Ended! We have a winner: "+ get_player2 + " won.")
         exit()
     elif vertical3:
         winner = gameboard[2]
         if winner == get_player1symbol:
-            print(get_player1 + " won.")
+            print("Game Ended! We have a winner: "+ get_player1 + " won.")
         elif winner == get_player2symbol:
-            print(get_player2 + " won.")
+            print("Game Ended! We have a winner: "+ get_player2 + " won.")
         exit()
 
+print("Welcome! This program is a Tic Tac Toe Game"
++"\nHave fun and enjoy the game!\n")
+
+gameboard = ["☐", "☐", "☐",
+         "☐", "☐", "☐",
+         "☐", "☐", "☐"]
+
+get_player1 = input("Enter Player 1's Name: ")
+get_player1symbol = input("Enter Player 1's desired Symbol: ")
+get_player1type = " "+get_player1symbol+" "
+get_player2 = input("Enter Player 2's Name: ")
+get_player2symbol = input("Enter Player 1's desired Symbol: ")
+get_player2type = " "+get_player2symbol+" "
+
+
+player_turn = {
+    "Name":get_player1,
+    "Symbol":get_player1symbol
+}
 
 board_preview()
 while True:
