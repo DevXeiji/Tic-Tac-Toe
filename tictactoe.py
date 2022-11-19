@@ -20,5 +20,9 @@ def board_preview():
     +gameboard[6]+" "+gameboard[7]+" "+gameboard[8]+"\n"
     +"\n")
 
-print(get_player1, get_player2, player_turn)
 board_preview()
+print(player_turn["Name"]+"'s Turn")
+pos = input("Choose a position from 0-9: ")
+print(pos)
+
+
