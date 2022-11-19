@@ -14,6 +14,11 @@ player_turn = {
 }
 
 def board_preview():
-    print("\n"+gameboard+"\n")
+    print("\n"
+    +gameboard[0]+" "+gameboard[1]+" "+gameboard[2]+"\n"
+    +gameboard[3]+" "+gameboard[4]+" "+gameboard[5]+"\n"
+    +gameboard[6]+" "+gameboard[7]+" "+gameboard[8]+"\n"
+    +"\n")
 
 print(get_player1, get_player2, player_turn)
+board_preview()
