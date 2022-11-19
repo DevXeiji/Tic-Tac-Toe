@@ -4,3 +4,6 @@
 gameboard = ["☐", "☐", "☐",
          "☐", "☐", "☐",
          "☐", "☐", "☐"]
+
+get_player1 = input("Enter Player 1's Name: ")
+get_player2 = input("Enter Player 2's Name: ")
