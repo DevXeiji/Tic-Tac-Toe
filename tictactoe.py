@@ -27,14 +27,19 @@ def choose_position():
     gameboard[pos] = player_turn["Symbol"]
     board_preview()
 
+def change_player():
+    if player_turn["Symbol"] == "X":
+        player_turn["Symbol"] = "O"    
+    elif player_turn["Symbol"] == "O":
+        player_turn["Symbol"] = "X"
+    if player_turn["Name"] == get_player1:
+        player_turn["Name"] = get_player2    
+    elif player_turn["Name"] == get_player2:
+        player_turn["Name"] = get_player1
+    print(player_turn["Symbol"], player_turn["Name"])
+
 board_preview()
 choose_position()
-
-
-if player_turn["Symbol"] == "X":
-    player_turn["Symbol"] = "O"    
-elif player_turn["Symbol"] == "O":
-    player_turn["Symbol"] = "X"  
-print(player_turn["Symbol"])
+change_player()
 
 
