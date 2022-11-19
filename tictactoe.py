@@ -56,8 +56,24 @@ while True:
         print("Game Ended with a tie!")
         exit()
     row1 = gameboard[0] == gameboard[1] == gameboard[2] != "☐"
+    row2 = gameboard[3] == gameboard[4] == gameboard[5] != "☐"
+    row3 = gameboard[6] == gameboard[7] == gameboard[8] != "☐"
     if row1:
         winner = gameboard[0]
+        if winner == "X":
+            print(get_player1 + " won.")
+        elif winner == "O":
+            print(get_player2 + " won.")
+        exit()
+    elif row2:
+        winner = gameboard[3]
+        if winner == "X":
+            print(get_player1 + " won.")
+        elif winner == "O":
+            print(get_player2 + " won.")
+        exit()
+    elif row3:
+        winner = gameboard[6]
         if winner == "X":
             print(get_player1 + " won.")
         elif winner == "O":
