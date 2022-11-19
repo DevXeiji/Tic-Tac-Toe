@@ -101,8 +101,24 @@ while True:
         print("Game Ended with a tie!")
         exit()
     vertical1 = gameboard[0] == gameboard[3] == gameboard[6] != "☐"
+    vertical2 = gameboard[1] == gameboard[4] == gameboard[7] != "☐"
+    vertical3 = gameboard[2] == gameboard[5] == gameboard[8] != "☐"
     if vertical1:
         winner = gameboard[0]
+        if winner == "X":
+            print(get_player1 + " won.")
+        elif winner == "O":
+            print(get_player2 + " won.")
+        exit()
+    elif vertical2:
+        winner = gameboard[1]
+        if winner == "X":
+            print(get_player1 + " won.")
+        elif winner == "O":
+            print(get_player2 + " won.")
+        exit()
+    elif vertical3:
+        winner = gameboard[2]
         if winner == "X":
             print(get_player1 + " won.")
         elif winner == "O":
