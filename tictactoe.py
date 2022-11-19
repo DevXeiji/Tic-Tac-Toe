@@ -20,12 +20,17 @@ def board_preview():
     +gameboard[6]+"  | "+gameboard[7]+"  | "+gameboard[8]+"    6 | 7 | 8"+"\n"
     +"\n")
 
+def choose_position():
+    print(player_turn["Name"]+"'s Turn")
+    pos = input("Choose a position from 0-9: ")
+    pos = int(pos)
+    gameboard[pos] = player_turn["Symbol"]
+    board_preview()
+
 board_preview()
-print(player_turn["Name"]+"'s Turn")
-pos = input("Choose a position from 0-9: ")
-pos = int(pos)
-gameboard[pos] = player_turn["Symbol"]
-board_preview()
+choose_position()
+
+
 if player_turn["Symbol"] == "X":
     player_turn["Symbol"] = "O"    
 elif player_turn["Symbol"] == "O":
