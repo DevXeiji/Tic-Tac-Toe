@@ -47,14 +47,7 @@ def change_player():
         player_turn["Name"] = get_player1
 
 
-
-board_preview()
-while True:
-    choose_position()
-    change_player()
-    if "☐" not in gameboard:
-        print("Game Ended with a tie!")
-        exit()
+def row_winner():
     row1 = gameboard[0] == gameboard[1] == gameboard[2] != "☐"
     row2 = gameboard[3] == gameboard[4] == gameboard[5] != "☐"
     row3 = gameboard[6] == gameboard[7] == gameboard[8] != "☐"
@@ -79,6 +72,18 @@ while True:
         elif winner == "O":
             print(get_player2 + " won.")
         exit()
+
+
+board_preview()
+while True:
+    choose_position()
+    change_player()
+    row_winner()
+    if "☐" not in gameboard:
+        print("Game Ended with a tie!")
+        exit()
+
+
     
 
 
