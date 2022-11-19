@@ -15,9 +15,9 @@ player_turn = {
 
 def board_preview():
     print("\n"
-    +gameboard[0]+" "+gameboard[1]+" "+gameboard[2]+"\n"
-    +gameboard[3]+" "+gameboard[4]+" "+gameboard[5]+"\n"
-    +gameboard[6]+" "+gameboard[7]+" "+gameboard[8]+"\n"
+    +gameboard[0]+"  | "+gameboard[1]+"  | "+gameboard[2]+"    1 | 2 | 3"+"\n"
+    +gameboard[3]+"  | "+gameboard[4]+"  | "+gameboard[5]+"    4 | 5 | 6"+"\n"
+    +gameboard[6]+"  | "+gameboard[7]+"  | "+gameboard[8]+"    7 | 8 | 9"+"\n"
     +"\n")
 
 board_preview()
