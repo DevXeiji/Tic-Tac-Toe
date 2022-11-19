@@ -82,7 +82,14 @@ while True:
     if "☐" not in gameboard:
         print("Game Ended with a tie!")
         exit()
-
+    diagonal1 = gameboard[0] == gameboard[4] == gameboard[8] != "☐"
+    if diagonal1:
+        winner = gameboard[0]
+        if winner == "X":
+            print(get_player1 + " won.")
+        elif winner == "O":
+            print(get_player2 + " won.")
+        exit()
 
     
 
