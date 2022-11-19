@@ -46,9 +46,9 @@ def change_player():
     elif player_turn["Name"] == get_player2:
         player_turn["Name"] = get_player1
 
+board_preview()
 while True:
     exit()
-    board_preview()
     choose_position()
     change_player()
 
