@@ -46,10 +46,14 @@ def change_player():
     elif player_turn["Name"] == get_player2:
         player_turn["Name"] = get_player1
 
+
+
 board_preview()
 while True:
-    exit()
     choose_position()
     change_player()
+    if "☐" not in gameboard:
+        print("Game Ended with a tie!")
+        exit()
 
 
