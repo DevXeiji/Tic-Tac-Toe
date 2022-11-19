@@ -6,7 +6,9 @@ gameboard = ["☐", "☐", "☐",
          "☐", "☐", "☐"]
 
 get_player1 = input("Enter Player 1's Name: ")
+get_player1symbol = input("Enter Player 1's desired Symbol: ")
 get_player2 = input("Enter Player 2's Name: ")
+get_player2symbol = input("Enter Player 1's desired Symbol: ")
 
 player_turn = {
     "Name":get_player1,
